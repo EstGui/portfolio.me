@@ -14,7 +14,7 @@
   --font-sans: Inter, sans-serif;
   --font-heading: Poppins, sans-serif;
 
-    /* Spacing */
+  /* Spacing */
   --spacing-xs: 8px;
   --spacing-sm: 12px;
   --spacing-md: 16px;
@@ -29,16 +29,14 @@
   --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
 
   /* Animation */
-  --duration-fast: .15s;
-  --duration-slow: .4s;
-
+  --duration-fast: 0.15s;
+  --duration-slow: 0.4s;
 
   /* --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono); */
 }
-
 
 @media (prefers-color-scheme: dark) {
   :root {

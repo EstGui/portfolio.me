@@ -15,18 +15,17 @@ interface GithubUserResponse {
   bio: string;
 }
 
-
-export default function About({ username } : GithubUserProps) {
+export default function About({ username }: GithubUserProps) {
   const [userData, setUserData] = useState<GithubUserResponse | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [, setLoading] = useState(true);
+  const [, setError] = useState(null);
 
   useEffect(() => {
     async function fetchUser() {
       try {
-        const res = await fetch(`https://api.github.com/users/${username}`)
+        const res = await fetch(`https://api.github.com/users/${username}`);
         if (!res.ok) throw new Error("Usuário não encontrado");
-        
+
         const data = await res.json();
         setUserData(data);
       } catch (err: any) {
@@ -37,22 +36,24 @@ export default function About({ username } : GithubUserProps) {
     }
 
     fetchUser();
-  }, [username])
+  }, [username]);
 
   return (
-    <div className="flex min-h-[280] bg-secondary min-w-full rounded-2xl overflow-hidden border border-[#646464]">
+    <div className="bg-secondary flex min-h-[280] min-w-full overflow-hidden rounded-2xl border border-[#646464]">
       <Image
         src={userData?.avatar_url ?? "/images/default-avatar.svg"}
         width={280}
         height={280}
         alt={`profile photo ${userData?.name}`}
         draggable="false"
-        className="border-r border-r-[#646464] min-h-[280] min-w-[280]"
+        className="min-h-[280] min-w-[280] border-r border-r-[#646464]"
       />
-      <div className="w-full flex flex-col items-center justify-center gap-1.5">
-        <h1 className="font-primary text-5xl font-semibold">{userData?.name}</h1>
-        <p>{userData?.bio}</p>
+      <div className="flex w-full flex-col items-center justify-center gap-1.5">
+        <h1 className="font-primary text-5xl font-semibold">
+          {userData?.name || "Username"}
+        </h1>
+        <p>{userData?.bio || "Description"}</p>
       </div>
     </div>
-  )
+  );
 }
