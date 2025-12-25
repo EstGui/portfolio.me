@@ -2,7 +2,6 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,19 +29,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-
-        <Script
-          type="module"
-          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-          strategy="afterInteractive"
-        />
-
-        {/* Ionicons fallback */}
-        <Script
-          noModule
-          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );

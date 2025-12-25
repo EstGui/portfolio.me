@@ -33,7 +33,7 @@ export default function ProjectsContent({ username }: { username: string }) {
   return (
     <div
       id="cardsContainer"
-      className="mb-2 grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2"
+      className="grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2"
     >
       {userData
         ?.filter((repo) => repo.owner?.login.toLowerCase() === username)
