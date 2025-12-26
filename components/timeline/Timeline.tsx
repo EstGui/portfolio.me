@@ -29,17 +29,17 @@ export default function Timeline({
                 !isLast
                   ? `before:absolute before:top-[-25px] before:left-[-30px] before:h-[calc(100%+50px)] before:w-px before:bg-[#484848] before:content-['']`
                   : ""
-              } after:absolute after:top-[8px] after:left-[-33px] after:h-[7] after:w-[7] after:rounded after:bg-[#6699ff] after:shadow-[0_0_0_4px_#484848] after:content-['']`}
+              } after:absolute after:top-2 after:left-[-33px] after:h-[7] after:w-[7] after:rounded after:bg-[#6699ff] after:shadow-[0_0_0_4px_#484848] after:content-['']`}
             >
-              <h4 className="mb-[7px] text-sm leading-[1.3] font-bold">
+              <h4 className="mb-0.5 leading-[1.3] font-medium">
                 {item.title}
               </h4>
 
-              <span className="leading-[1.6] font-normal text-[#7297E9]">
+              <span className="leading-7 text-highlight">
                 {`${item.start} - ${item.end}`}
               </span>
 
-              <p className="leading-[1.6] font-light">{item.description}</p>
+              <p className="leading-[1.6] font-light text-sm">{item.description}</p>
             </li>
           );
         })}

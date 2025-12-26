@@ -39,20 +39,20 @@ export default function About({ username }: GithubUserProps) {
   }, [username]);
 
   return (
-    <div className="bg-secondary flex w-full overflow-hidden rounded-xl border border-[#646464]">
-      <Image
+    <div className="bg-surface flex w-full overflow-hidden rounded-xl border border-border">
+    <Image
         src={userData?.avatar_url ?? "/images/default-avatar.svg"}
-        width={140}
-        height={140}
+        width={135}
+        height={135}
         alt={`profile photo ${userData?.name}`}
         draggable="false"
-        className="h-[140] w-[140] border-r border-r-[#646464]"
+        className="h-[135] w-[135] border-r border-r-border"
       />
-      <div className="flex flex-col items-center justify-center w-full">
-        <h1 className="font-primary font-semibold text-lg">
+      <div className="flex w-full flex-col items-center justify-center">
+        <h1 className="font-primary text-xl font-medium text-foreground">
           {userData?.name || "Username"}
         </h1>
-        <p className="text-sm">{userData?.bio || "Description"}</p>
+        <p className="text-xs font-light">{userData?.bio || "Description"}</p>
       </div>
     </div>
   );

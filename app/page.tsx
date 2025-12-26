@@ -26,8 +26,8 @@ export default function Home() {
   }, [tab]);
 
   return (
-    <div className="flex items-center justify-center p-4 font-sans dark:bg-black">
-      <main className="flex w-full flex-col items-center justify-start gap-4 dark:bg-black">
+    <div className="bg-bg-main flex items-center justify-center p-4">
+      <main className="flex w-full flex-col items-center justify-start gap-4">
         <About username={user} />
         <NavBar tab={tab} setTab={setTab} />
         <ContentContainer username={user} tabName={tab}>
