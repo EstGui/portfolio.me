@@ -39,7 +39,7 @@ export default function About({ username }: GithubUserProps) {
   }, [username]);
 
   return (
-    <div className="bg-surface flex w-full overflow-hidden rounded-xl border border-border">
+    <div className="bg-surface flex w-full overflow-hidden rounded-lg border border-border">
     <Image
         src={userData?.avatar_url ?? "/images/default-avatar.svg"}
         width={135}

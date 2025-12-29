@@ -15,11 +15,11 @@ export default function AboutContent() {
           <h3>What I Do</h3>
         </div>
 
-        <div className="flex justify-between gap-5 overflow-x-scroll">
-          <div className="h-80 w-56 shrink-0 rounded-lg border border-border bg-[#222] shadow-xl transition hover:border-[#7297E9]"></div>
-          <div className="h-80 w-56 shrink-0 rounded-lg border border-border bg-[#222] shadow-xl transition hover:border-[#7297E9]"></div>
-          <div className="h-80 w-56 shrink-0 rounded-lg border border-border bg-[#222] shadow-xl transition hover:border-[#7297E9]"></div>
-          <div className="h-80 w-56 shrink-0 rounded-lg border border-border bg-[#222] shadow-xl transition hover:border-[#7297E9]"></div>
+        <div className="flex justify-between gap-5 overflow-x-auto">
+          <div className="h-80 w-56 shrink-0 rounded-lg border border-border bg-[#222] shadow-xl transition hover:border-highlight"></div>
+          <div className="h-80 w-56 shrink-0 rounded-lg border border-border bg-[#222] shadow-xl transition hover:border-highlight"></div>
+          <div className="h-80 w-56 shrink-0 rounded-lg border border-border bg-[#222] shadow-xl transition hover:border-highlight"></div>
+          <div className="h-80 w-56 shrink-0 rounded-lg border border-border bg-[#222] shadow-xl transition hover:border-highlight"></div>
         </div>
       </section>
     </>

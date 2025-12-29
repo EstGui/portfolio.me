@@ -36,9 +36,6 @@ export default function Home() {
           {tab === "projects" && <ProjectsContent username={user} />}
           {tab === "contact" && <ContactContent />}
         </ContentContainer>
-        <button className="fixed right-10 bottom-8 hidden rounded-4xl bg-blue-400 hover:cursor-pointer">
-          Oi
-        </button>
       </main>
     </div>
   );

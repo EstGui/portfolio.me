@@ -1,7 +1,9 @@
 export interface TimelineItem {
   id: number;
   title: string;
-  start: string;
-  end: string;
+  startDate: string;
+  endDate: string;
   description: string;
+  jobTitle?: string;
+  institution?: string;
 }
