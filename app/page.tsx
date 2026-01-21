@@ -1,42 +1,19 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 import About from "@/components/about/about";
-import AboutContent from "@/components/aboutContent/AboutContent";
-import ContactContent from "@/components/contactContent/ContactContent";
 import ContentContainer from "@/components/contentContainer/ContentContainer";
 import NavBar from "@/components/navBar/NavBar";
-import ProjectsContent from "@/components/projectsContent/ProjectsContent";
-import ResumeContent from "@/components/resumeContent/ResumeContent";
 
-export default function Home() {
-  const [user] = useState("estgui");
-  const [tab, setTab] = useState("about");
-
-  useEffect(() => {
-    const savedTab = localStorage.getItem("selectedTab");
-    if (savedTab) {
-      setTab(savedTab);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("selectedTab", tab);
-  }, [tab]);
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ tab?: string }>;
+}) {
+  const selectedTab = (await searchParams).tab || "about";
 
   return (
-    <div className="bg-bg-main flex items-center justify-center p-4">
-      <main className="flex w-full flex-col items-center justify-start gap-4">
-        <About username={user} />
-        <NavBar tab={tab} setTab={setTab} />
-        <ContentContainer username={user} tabName={tab}>
-          {tab === "about" && <AboutContent />}
-          {tab === "resume" && <ResumeContent />}
-          {tab === "projects" && <ProjectsContent username={user} />}
-          {tab === "contact" && <ContactContent />}
-        </ContentContainer>
-      </main>
-    </div>
+    <main className="bg-background flex w-full flex-col justify-start gap-4 p-4 sm:p-6 lg:grid lg:grid-cols-[auto_1fr] lg:grid-rows-[auto_1fr]">
+      <About />
+      <NavBar activeTab={selectedTab} />
+      <ContentContainer activeTab={selectedTab} />
+    </main>
   );
 }

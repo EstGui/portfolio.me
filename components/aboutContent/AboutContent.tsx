@@ -1,25 +1,31 @@
+import ServiceCard from "../serviceCard/ServiceCard";
+
 export default function AboutContent() {
+  const services_arr = [
+    "APIs & Backend",
+    "Web Apps",
+    "Clean & Scalable Code",
+    "Worflow Automation",
+    "Code Maintenance & Refactoring",
+  ];
+
   return (
     <>
-      <section className="mb-6 flex flex-col gap-4">
-        <p className="text-justify indent-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-          eligendi rerum nihil laboriosam dignissimos vitae temporibus ex unde,
-          doloremque mollitia ipsum nobis similique amet pariatur, nam
-          accusamus, optio laborum iusto!
+      <section>
+        <p className="text-muted text-justify indent-4">
+          Software developer with experience across backend and frontend,
+          focused on building well-structured systems, clean code, system
+          integration, and continuous process improvement.
         </p>
       </section>
 
       <section>
-        <div className="mb-4 text-lg font-semibold">
-          <h3>What I Do</h3>
-        </div>
+        <h3 className="mb-4 text-lg font-semibold">What I Do</h3>
 
         <div className="flex justify-between gap-5 overflow-x-auto">
-          <div className="h-80 w-56 shrink-0 rounded-lg border border-border bg-[#222] shadow-xl transition hover:border-highlight"></div>
-          <div className="h-80 w-56 shrink-0 rounded-lg border border-border bg-[#222] shadow-xl transition hover:border-highlight"></div>
-          <div className="h-80 w-56 shrink-0 rounded-lg border border-border bg-[#222] shadow-xl transition hover:border-highlight"></div>
-          <div className="h-80 w-56 shrink-0 rounded-lg border border-border bg-[#222] shadow-xl transition hover:border-highlight"></div>
+          {services_arr.map((service, index) => (
+            <ServiceCard key={index} title={service} />
+          ))}
         </div>
       </section>
     </>

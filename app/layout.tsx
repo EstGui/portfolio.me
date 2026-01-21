@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Guilherme Esteves - Portfólio",
+  title: "Guilherme Esteves - Portfolio",
   description: "More about Guilherme Esteves",
 };
 
@@ -29,17 +29,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Toaster 
-        position="top-center"
-        toastOptions={{
-          duration: 3000,
-          style: {
-            background: '#141414',
-            color: '#ededed',
-            fontFamily: '"Inter", sanas-serif',
-          },
-          // icon: ' '
-        }}/>
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            duration: 3000,
+            style: {
+              background: "#141414",
+              color: "#ededed",
+              fontFamily: '"Inter", sanas-serif',
+            },
+            // icon: ' '
+          }}
+        />
         {children}
       </body>
     </html>

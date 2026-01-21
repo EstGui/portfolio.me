@@ -1,8 +1,6 @@
 const TOKEN = process.env.TELEGRAM_TOKEN;
 
-export async function sendTelegramMessage(
-    content: string
-) {
+export async function sendTelegramMessage(content: string) {
   return fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },

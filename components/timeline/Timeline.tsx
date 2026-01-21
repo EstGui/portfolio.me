@@ -2,6 +2,8 @@ import { LucideIcon } from "lucide-react";
 
 import { TimelineItem } from "@/app/types/TimelineItem";
 
+import IconWrapper from "../iconWrapper/IconWrapper";
+
 export default function Timeline({
   title,
   timelineItems,
@@ -12,12 +14,10 @@ export default function Timeline({
   icon: LucideIcon;
 }) {
   return (
-    <section className="mb-7">
+    <section>
       <div className="mb-6 flex items-center gap-3.5">
-        <div className="relative z-0 flex h-[31px] w-[31px] items-center justify-center rounded-[10px] bg-[linear-gradient(135deg,#606060,#22222200)] before:absolute before:inset-px before:z-[-1] before:rounded-[inherit] before:bg-[#222] before:content-['']">
-          <Icon size={18} color="#7297E9" className="z-1" />
-        </div>
-        <h3 className="text-xl font-semibold">{title}</h3>
+        <IconWrapper icon={Icon} />
+        <h3 className="text-lg font-semibold">{title}</h3>
       </div>
 
       <ol className="ml-11">
@@ -33,9 +33,9 @@ export default function Timeline({
                   : ""
               } after:absolute after:top-2 after:left-[-33px] after:h-[7] after:w-[7] after:rounded after:bg-[#6699ff] after:shadow-[0_0_0_4px_#484848] after:content-['']`}
             >
-              <h4 className="mb-0.5 leading-[1.3] font-medium">
+              <h4 className="mb-0.5 leading-[1.3] font-normal">
                 {item.title}
-                <span className="font-light">
+                <span className="font-extralight">
                   {" "}
                   • {item.jobTitle || item.institution}
                 </span>
@@ -45,7 +45,7 @@ export default function Timeline({
                 {`${item.startDate} - ${item.endDate}`}
               </span>
 
-              <p className="text-sm leading-[1.6] font-light">
+              <p className="text-muted text-sm leading-[1.6] font-light">
                 {item.description}
               </p>
             </li>
