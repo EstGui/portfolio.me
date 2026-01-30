@@ -10,7 +10,7 @@ export default async function ResumeContent() {
   const [education, experience] = await Promise.all([
     fetchSkills(`${baseUrl}/api/resume/education`),
     fetchSkills(`${baseUrl}/api/resume/experience`),
-  ])
+  ]);
 
   return (
     <>

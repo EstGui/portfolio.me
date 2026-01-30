@@ -7,12 +7,13 @@ import { GithubRepository } from "@/app/types/GithubRepository";
 
 import ProjectCard from "../projectCard/ProjectCard";
 
-
-interface Props {
+interface ProjectsContentProps {
   repositories: GithubRepository[];
 }
 
-export default function ProjectsContent({ repositories }: Props) {
+export default function ProjectsContent({
+  repositories,
+}: ProjectsContentProps) {
   const [open, setOpen] = useState(false);
   const [filterValue, setFilterValue] = useState("All");
 

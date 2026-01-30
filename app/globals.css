@@ -58,3 +58,12 @@ Borders:           #222222
 Accent Blue:       #2F6FED
 Accent Hover:      #4B78FF 
 */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

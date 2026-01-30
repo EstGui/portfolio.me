@@ -50,7 +50,7 @@ export async function GET() {
       "Accountability",
     ],
 
-    languages: ["Portuguese — Native", "English — Advanced"],
+    languages: ["Portuguese - Native", "English - Advanced"],
   };
 
   return NextResponse.json(skills);

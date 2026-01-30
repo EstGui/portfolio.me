@@ -2,7 +2,11 @@
 
 import Link from "next/link";
 
-export default function Navbar({ activeTab }: { activeTab: string }) {
+type NavBarProps = {
+  activeTab: string;
+};
+
+export default function Navbar({ activeTab }: NavBarProps) {
   const tabs = ["about", "resume", "projects", "skills", "contact"];
   return (
     <div className="fixed inset-x-0 bottom-0 z-10 h-28 bg-linear-to-t from-black/80 to-transparent lg:static lg:h-auto">

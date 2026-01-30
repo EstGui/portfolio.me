@@ -20,7 +20,7 @@ export default function ProjectsSkeleton() {
             .map((_, i) => (
               <div
                 key={i}
-                className="border-border relative  overflow-hidden rounded-lg border bg-[#202020] aspect-video"
+                className="border-border relative aspect-video overflow-hidden rounded-lg border bg-[#202020]"
               >
                 <div className="bg-background absolute bottom-0 flex max-h-21 w-full flex-col gap-1 p-4">
                   <Skeleton height={22} width="75%" />
