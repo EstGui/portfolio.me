@@ -8,7 +8,7 @@ export default async function ProjectsContentServer() {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/github/starred`,
       {
-        // next: { revalidate: 300 },
+        next: { revalidate: 300 },
       }
     );
 
