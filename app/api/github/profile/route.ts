@@ -15,8 +15,7 @@ export async function GET() {
       Accept: "application/vnd.github+json",
       Authorization: `Bearer ${token}`,
       "X-Github-Api-Version": "2022-11-28",
-    },
-    next: { revalidate: 300 },
+    }
   });
 
   if (!res.ok) {

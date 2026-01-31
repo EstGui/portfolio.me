@@ -24,7 +24,12 @@ export default function About() {
   useEffect(() => {
     async function fetchUser() {
       try {
-        const res = await fetch("/api/github/profile");
+        const res = await fetch(
+          "/api/github/profile",
+          {
+            next: { revalidate: 300 } 
+          }
+        );
 
         if (!res.ok) throw new Error("User not found");
 
