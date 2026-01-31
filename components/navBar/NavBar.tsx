@@ -1,13 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 type NavBarProps = {
   activeTab: string;
 };
 
 export default function Navbar({ activeTab }: NavBarProps) {
-  const tabs = ["about", "resume", "projects", "skills", "contact"];
+  const tabs: string[] = ["about", "resume", "projects", "skills", "contact"];
+
+  if (!tabs.includes(activeTab)) {
+    notFound()
+  }
+
   return (
     <div className="fixed inset-x-0 bottom-0 z-10 h-28 bg-linear-to-t from-black/80 to-transparent lg:static lg:h-auto">
       <div className="bg-surface border-border fixed inset-x-4 bottom-4 z-10 flex min-h-14 justify-evenly rounded-lg border sm:inset-x-6 lg:static lg:min-h-16">
