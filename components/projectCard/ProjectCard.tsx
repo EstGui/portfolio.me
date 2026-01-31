@@ -2,7 +2,6 @@ type ProjectCardProps = {
   repoName: string;
   repoLink: string;
   repoTopics: string[];
-  repoImage: string;
 };
 
 export default function ProjectCard({
