@@ -4,6 +4,7 @@ import { MailOpen, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
+import ActionButton from "../button/ActionButton";
 import { OctocatIcon } from "../icons/GitHubIcon";
 import LinkedinIcon from "../icons/LinkedinIcon";
 import ProfileInfoItem from "../profileInfoItem/ProfileInfoItem";
@@ -77,16 +78,10 @@ export default function ProjectsContent() {
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Message"
               required
-              className="focus:border-highlight row-3 min-h-36 resize-y overflow-hidden rounded-lg border border-[#484848] px-5 py-3 transition outline-none focus:invalid:border-red-700"
+              className="focus:border-highlight row-3 min-h-40 resize-y overflow-hidden rounded-lg border border-[#484848] px-5 py-3 transition outline-none focus:invalid:border-red-700"
             ></textarea>
 
-            <button
-              type="submit"
-              className="border-highlight/50 lg:hover:border-highlight/90 row-4 flex cursor-pointer items-center justify-center gap-1.5 rounded-lg border bg-black/20 px-5 py-3 shadow-lg backdrop-blur-lg transition-all duration-300 ease-in-out active:scale-98"
-            >
-              <Send size={18} color="#7297E9" className="z-1" />
-              <span>Send Message</span>
-            </button>
+            <ActionButton icon={Send} text="Send Messagee" type="submit" />
           </form>
         </section>
 

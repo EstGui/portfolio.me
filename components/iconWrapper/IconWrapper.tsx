@@ -17,7 +17,7 @@ export default function IconWrapper({
         className
       )}
     >
-      <Icon className="text-highlight z-1 h-4.5 w-4.5" />
+      <Icon className="text-highlight h-4.5 w-4.5" />
     </div>
   );
 }
