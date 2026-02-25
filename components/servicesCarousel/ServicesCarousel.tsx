@@ -13,6 +13,7 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
+import { VscAzure } from "react-icons/vsc";
 
 export default function ServicesCarousel() {
   const techIcons = [
@@ -26,6 +27,9 @@ export default function ServicesCarousel() {
     { icon: SiNodedotjs, name: "Node.js" },
     { icon: SiDotnet, name: ".NET" },
     { icon: SiPostgresql, name: "PostgreSQL" },
+
+    // Cloud
+    { icon: VscAzure, name: "Azure" },
 
     // Frontend
     { icon: SiReact, name: "React" },
