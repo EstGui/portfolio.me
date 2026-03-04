@@ -1,4 +1,4 @@
-import { FaJava } from "react-icons/fa";
+import { FaAws, FaDocker, FaJava } from "react-icons/fa";
 import {
   SiDotnet,
   SiFlutter,
@@ -27,9 +27,11 @@ export default function ServicesCarousel() {
     { icon: SiNodedotjs, name: "Node.js" },
     { icon: SiDotnet, name: ".NET" },
     { icon: SiPostgresql, name: "PostgreSQL" },
+    { icon: FaDocker, name: "Docker" },
 
     // Cloud
     { icon: VscAzure, name: "Azure" },
+    { icon: FaAws, name: "AWS" },
 
     // Frontend
     { icon: SiReact, name: "React" },
