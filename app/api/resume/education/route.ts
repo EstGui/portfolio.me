@@ -16,7 +16,7 @@ export async function GET() {
     {
       id: 6,
       title: "Formação .NET Developer",
-      institution: "DIO",
+      institution: "Digital Innovation One",
       startDate: "10/2025",
       endDate: "08/03/2026",
       description:
