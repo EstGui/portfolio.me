@@ -5,7 +5,7 @@ import { TimelineItem } from "@/app/types/TimelineItem";
 export async function GET() {
   const cursos_arr: TimelineItem[] = [
     {
-      id: 1,
+      id: 7,
       title: "Bachelor's degree in Computer Science",
       institution: "UNASP",
       startDate: "07/2022",
@@ -14,7 +14,16 @@ export async function GET() {
       "Fundamentals of computer science, including algorithms, data structures, software engineering, databases, operating systems, and web development.",
     },
     {
-      id: 2,
+      id: 6,
+      title: "Formação .NET Developer",
+      institution: "DIO",
+      startDate: "10/2025",
+      endDate: "08/03/2026",
+      description:
+      "Development of backend applications using C# and the .NET platform, including ASP.NET Core Web APIs, object-oriented programming, RESTful services, Entity Framework, database integration, authentication, and cloud deployment concepts with Azure.",
+    },
+    {
+      id: 5,
       title: "Node.js Fundamentals Program",
       institution: "Digital Innovation One",
       endDate: "11/2024",
@@ -22,7 +31,7 @@ export async function GET() {
       "Backend development with Node.js, REST API creation, Express, authentication, data validation, database integration, and architectural concepts.",
     },
     {
-      id: 3,
+      id: 4,
       title: "JavaScript Developer Program",
       institution: "Digital Innovation One",
       endDate: "09/2023",
@@ -30,7 +39,7 @@ export async function GET() {
         "Modern JavaScript (ES6+), core language concepts, DOM manipulation, asynchronous programming, API consumption, and frontend development best practices.",
     },
     {
-      id: 4,
+      id: 3,
       title: "Android Developer Program",
       institution: "Digital Innovation One",
       endDate: "08/2023",
@@ -38,7 +47,7 @@ export async function GET() {
         "Android application development using Kotlin, MVVM architecture, REST API consumption, data persistence, and mobile UI best practices.",
     },
     {
-      id: 5,
+      id: 2,
       title: "Java Developer Program",
       institution: "Digital Innovation One",
       endDate: "07/2023",
@@ -46,7 +55,7 @@ export async function GET() {
         "Java programming with a focus on object-oriented principles, collections, exception handling, streams, testing, best practices, and backend application development.",
     },
     {
-      id: 6,
+      id: 1,
       title: "Advanced Low to Advanced Mid Level English",
       institution: "iW - English School",
       endDate: "01/2019",
