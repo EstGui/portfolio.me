@@ -70,7 +70,7 @@ export default function About() {
       <div className="border-r-border relative border-r lg:border-r-0">
         <Image
           src={user?.avatar_url ?? "/images/default-avatar.svg"}
-          alt={"profile photo"}
+          alt={"Guilherme Esteves — Full Stack Developer"}
           draggable={false}
           priority
           width={200}

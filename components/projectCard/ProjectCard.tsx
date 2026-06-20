@@ -13,6 +13,8 @@ export default function ProjectCard({
     <a
       href={repoLink}
       target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`View ${repoName} repository on GitHub`}
       className="group border-border ease relative aspect-video overflow-hidden rounded-lg border bg-[#202020] transition duration-300 lg:hover:shadow-lg lg:hover:shadow-black/25 bg-cover bg-center"
       style={{
         backgroundImage: `url(https://raw.githubusercontent.com/estgui/${repoName}/main/preview.png)`,
